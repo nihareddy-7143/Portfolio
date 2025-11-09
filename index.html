@@ -74,6 +74,7 @@
         .nav-links {
             display: flex;
             gap: 32px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -102,6 +103,25 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        .resume-btn {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: 6px;
+            margin-left: 10px;
+            transition: all 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #e68900 !important;
+            transform: translateY(-2px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .resume-btn::after {
+            display: none !important;
         }
 
         /* Hero Section */
@@ -173,6 +193,22 @@
         .btn-outline:hover {
             background: var(--primary);
             color: white;
+        }
+
+        .btn-resume {
+            background: var(--accent);
+            margin-left: 12px;
+        }
+
+        .btn-resume:hover {
+            background: #e68900;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* Section Headers */
@@ -486,6 +522,25 @@
             font-weight: 500;
         }
 
+        .resume-download {
+            margin-top: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .resume-download h4 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .resume-download p {
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -599,6 +654,17 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+                margin: 5px 0;
+            }
         }
 
         /* Utility Classes */
@@ -637,6 +703,11 @@
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
+                    <!-- Resume Link in Navigation -->
+                    <a href="https://docs.google.com/document/d/166a8p_9vtVjAK3yPxZXv9aPe8a1YKcIL/edit?usp=sharing&ouid=112547315852790633161&rtpof=true&sd=true" 
+                       class="resume-btn" target="_blank">
+                       <i class="fas fa-file-pdf"></i> Resume
+                    </a>
                 </div>
             </div>
         </div>
@@ -654,8 +725,12 @@
                 <div class="badge">Data Science</div>
                 <div class="badge">Android Development</div>
             </div>
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="#contact" class="btn btn-outline" style="margin-left: 12px;">Get In Touch</a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                <!-- Resume Button in Hero Section -->
+                
+            </div>
         </div>
     </section>
 
@@ -671,7 +746,10 @@
                     <h3>Background</h3>
                     <p>I'm a Computer Science Engineering student at Maturi Venkata Subba Rao Engineering College with a strong academic record and diverse technical skills. My focus areas include cybersecurity, AI/ML, and web development.</p>
                     <p>I have completed multiple certifications and internships in cybersecurity and data science, and I'm passionate about creating innovative solutions to real-world problems.</p>
-                    <a href="#contact" class="btn mt-4">Contact Me</a>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn">Contact Me</a>
+                       
+                    </div>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -780,7 +858,7 @@
                             <span class="tech-tag">Web Scraping</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -796,7 +874,7 @@
                             <span class="tech-tag">Speech Processing</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -812,7 +890,7 @@
                             <span class="tech-tag">Web Development</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -830,7 +908,7 @@
                             <span class="tech-tag">NLP</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -848,7 +926,7 @@
                             <span class="tech-tag">Canva</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -865,7 +943,7 @@
                             <span class="tech-tag">Video Streaming</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/nihareddy-7143" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/nihareddy-7143" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -912,6 +990,9 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Resume Download Section -->
+                    
                     
                     <div class="social-links-large">
                         <a href="https://github.com/nihareddy-7143" class="social-link-large" target="_blank">
